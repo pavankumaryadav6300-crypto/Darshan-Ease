@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+:root {
+  --primary-color: #f59e0b; /* Golden Saffron */
+  --primary-glow: rgba(245, 158, 11, 0.4);
+  --accent-color: #ef4444; /* Diya Red */
+  --bg-gradient: linear-gradient(135deg, #090710 0%, #0f0c1b 50%, #1b132a 100%);
+  --card-bg: rgba(25, 20, 44, 0.45);
+  --card-border: rgba(255, 255, 255, 0.06);
+  --card-hover-border: rgba(245, 158, 11, 0.35);
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --success: #10b981;
+  --font-sans: 'Outfit', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.45);
+  --glow-light: 0 0 15px rgba(245, 158, 11, 0.15);
+  --glow-strong: 0 0 30px rgba(245, 158, 11, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-gradient);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #090710;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #f59e0b, #e11d48);
+  border-radius: 5px;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.serif-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* Base App Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2.5rem 6%;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Floating Glass Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 6%;
+  background: rgba(9, 7, 16, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--card-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.2));
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  list-style: none;
+}
+
+.navbar-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.navbar-link:hover, .navbar-link.active {
+  color: var(--primary-color);
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.4);
+}
+
+.navbar-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #f59e0b, #ef4444);
+  border-radius: 4px;
+  box-shadow: 0 0 10px #f59e0b;
+}
+
+/* Premium Card Overhaul */
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.glass-card:hover {
+  border-color: var(--card-hover-border);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(245, 158, 11, 0.08);
+}
+
+/* Interactive Sliders / Tab Panels */
+.tab-nav {
+  display: flex;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.4rem;
+  border-radius: 14px;
+  border: 1px solid var(--card-border);
+}
+
+.tab-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  padding: 0.6rem 1.2rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #f59e0b 0%, #e11d48 100%);
+  color: #090710;
+  box-shadow: var(--glow-light);
+}
+
+/* Premium Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #f59e0b 0%, #e11d48 100%);
+  color: #090710;
+  box-shadow: var(--glow-light);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #fbbf24 0%, #f43f5e 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--glow-strong);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+  color: white;
+}
+
+.btn-danger:hover {
+  background: linear-gradient(135deg, #f87171 0%, #dc2626 100%);
+  transform: translateY(-2px);
+}
+
+/* Premium Inputs with floating feel */
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #d1d5db;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-control {
+  background: rgba(9, 7, 16, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: white;
+  padding: 0.85rem 1.1rem;
+  border-radius: 12px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  background: rgba(9, 7, 16, 0.7);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
+  outline: none;
+}
+
+/* Premium Hero Section */
+.hero {
+  text-align: center;
+  padding: 5rem 1.5rem;
+  background: radial-gradient(circle at center, rgba(245, 158, 11, 0.15) 0%, transparent 65%);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  margin-bottom: 3.5rem;
+}
+
+.hero h1 {
+  font-size: 3.8rem;
+  font-weight: 800;
+  line-height: 1.15;
+  background: linear-gradient(to right, #ffffff 20%, #f59e0b 50%, #e11d48 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.25rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+/* Beautiful Tabbed Detail Cards */
+.detail-banner {
+  height: 320px;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.detail-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.45);
+}
+
+.detail-banner-content {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 2.5rem;
+  right: 2.5rem;
+}
+
+/* Physical Pass Layout (Ticket) */
+.premium-ticket {
+  background: radial-gradient(circle at 100% 50%, transparent 20px, var(--card-bg) 21px),
+              radial-gradient(circle at 0% 50%, transparent 20px, var(--card-bg) 21px);
+  background-position: right, left;
+  background-size: 100% 100%;
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 260px;
+}
+
+.ticket-cancelled {
+  opacity: 0.7;
+  filter: grayscale(0.5);
+  border-left: 6px solid var(--accent-color) !important;
+}
+
+.ticket-booked {
+  border-left: 6px solid var(--primary-color) !important;
+}
+
+@media (max-width: 900px) {
+  .premium-ticket {
+    grid-template-columns: 1fr;
+    background: var(--card-bg);
+  }
+  .qr-gate {
+    border-left: none !important;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    padding: 2rem 0;
+  }
+}
+
+/* Printer Optimizations */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .navbar, .btn, .tab-nav, .Toastify, .hero {
+    display: none !important;
+  }
+  .main-content {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+  .premium-ticket {
+    background: white !important;
+    color: black !important;
+    border: 2px solid black !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    grid-template-columns: 1fr 220px !important;
+    margin: 2rem 0;
+  }
+  .glass-card {
+    background: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+    box-shadow: none !important;
+  }
+  .form-control, select, option {
+    background: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+  }
+  .th {
+    color: black !important;
+    border-bottom: 2px solid black !important;
+  }
+  .td {
+    color: black !important;
+    border-bottom: 1px solid black !important;
+  }
+  .qr-gate {
+    border-left: 2px dashed black !important;
+  }
+  .qr-gate svg {
+    color: black !important;
+    stroke: black !important;
+  }
+}
