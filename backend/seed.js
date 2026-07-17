@@ -81,6 +81,42 @@ const templesData = [
     description: 'Meenakshi Temple, also known as Meenakshi Sundareswarar Temple, is a historic Hindu temple located on the southern bank of the Vaigai River in Madurai, Tamil Nadu, India. It is dedicated to Meenakshi, a form of Parvati, and her consort Sundareswarar (Shiva). The temple is theologically significant as it represents a confluence of various denominations of Hinduism such as Shaivism, Shaktism, and Vaishnavism.',
     image: '/temples/meenakshi.jpg',
     organizerIndex: 2
+  },
+  {
+    name: 'Khajuraho Group of Monuments',
+    deity: 'Various Hindu and Jain deities',
+    location: 'Chhatarpur, Madhya Pradesh',
+    timings: '08:00 AM - 06:00 PM',
+    description: 'The Khajuraho Group of Monuments are a group of Hindu and Jain temples in Chhatarpur district, Madhya Pradesh, India. They are a UNESCO World Heritage Site. The temples are famous for their nagara-style architectural symbolism and their erotic sculptures. Built between 885 AD and 1000 AD by the Chandela dynasty, they represent a pinnacle of Indian architectural and sculptural art.',
+    image: '/temples/khajuraho.jpg',
+    organizerIndex: 0
+  },
+  {
+    name: 'Lingaraja Temple',
+    deity: 'Harihara (Shiva and Vishnu)',
+    location: 'Bhubaneswar, Odisha',
+    timings: '06:00 AM - 09:00 PM',
+    description: 'Lingaraja Temple is a Hindu temple dedicated to Shiva and is one of the oldest temples in Bhubaneswar, the capital of the Indian state of Odisha. The temple represents the quintessence of the Kalinga architecture and culminating the medieval stages of the architectural tradition at Bhubaneswar. The central tower is 180 ft (55 m) tall, making it the largest temple in Bhubaneswar.',
+    image: '/temples/lingaraja.jpg',
+    organizerIndex: 2
+  },
+  {
+    name: 'Mahakaleshwar Jyotirlinga',
+    deity: 'Lord Shiva (Mahakala)',
+    location: 'Ujjain, Madhya Pradesh',
+    timings: '03:00 AM - 11:00 PM',
+    description: 'Mahakaleshwar Jyotirlinga is a Hindu temple dedicated to Shiva and is one of the twelve Jyotirlingas, shrines which are said to be the most sacred abodes of Shiva. It is located in the ancient city of Ujjain in the state of Madhya Pradesh, India. The temple is situated on the side of the Holy River Shipra. The presiding deity, Shiva in the lingam form is believed to be Swayambhu, deriving currents of power from within itself.',
+    image: '/temples/mahakaleshwar.jpg',
+    organizerIndex: 1
+  },
+  {
+    name: 'Virupaksha Temple',
+    deity: 'Lord Shiva (Virupaksha)',
+    location: 'Hampi, Karnataka',
+    timings: '06:00 AM - 01:00 PM, 05:00 PM - 09:00 PM',
+    description: 'Virupaksha Temple is located in Hampi in the Vijayanagara district of Karnataka, India. It is part of the Group of Monuments at Hampi, designated as a UNESCO World Heritage Site. The temple is dedicated to Lord Virupaksha, a form of Shiva. The temple was built by Lakkan Dandesha, a nayaka (chieftain) under the ruler Deva Raya II, also known as Prauda Deva Raya of the Vijayanagara Empire.',
+    image: '/temples/virupaksha.jpg',
+    organizerIndex: 0
   }
 ];
 
