@@ -196,6 +196,7 @@ const Dashboard = () => {
       {/* Custom Tabs Navigation */}
       <div className="tab-nav" style={{ marginBottom: '2.5rem' }}>
         <button
+          type="button"
           onClick={() => setActiveTab('bookings')}
           className={`tab-btn ${activeTab === 'bookings' ? 'active' : ''}`}
         >
@@ -203,6 +204,7 @@ const Dashboard = () => {
         </button>
 
         <button
+          type="button"
           onClick={() => setActiveTab('add-slots')}
           className={`tab-btn ${activeTab === 'add-slots' ? 'active' : ''}`}
         >
@@ -211,6 +213,7 @@ const Dashboard = () => {
 
         {user.role === 'ADMIN' && (
           <button
+            type="button"
             onClick={() => setActiveTab('add-temple')}
             className={`tab-btn ${activeTab === 'add-temple' ? 'active' : ''}`}
           >
@@ -220,6 +223,7 @@ const Dashboard = () => {
 
         {user.role === 'ADMIN' && (
           <button
+            type="button"
             onClick={() => setActiveTab('donations')}
             className={`tab-btn ${activeTab === 'donations' ? 'active' : ''}`}
           >

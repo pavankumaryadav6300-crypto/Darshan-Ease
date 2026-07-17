@@ -196,18 +196,21 @@ const TempleDetails = () => {
       {/* Tabs Layout Nav */}
       <div className="tab-nav" style={{ marginBottom: '2.5rem' }}>
         <button
+          type="button"
           onClick={() => setActiveTab('slots')}
           className={`tab-btn ${activeTab === 'slots' ? 'active' : ''}`}
         >
           <CalendarIcon size={16} /> Book Darshan Ticket
         </button>
         <button
+          type="button"
           onClick={() => setActiveTab('about')}
           className={`tab-btn ${activeTab === 'about' ? 'active' : ''}`}
         >
           <Compass size={16} /> History & Info
         </button>
         <button
+          type="button"
           onClick={() => setActiveTab('donate')}
           className={`tab-btn ${activeTab === 'donate' ? 'active' : ''}`}
         >
@@ -273,6 +276,7 @@ const TempleDetails = () => {
                     </span>
 
                     <button
+                      type="button"
                       onClick={() => handleOpenBookingModal(slot)}
                       className={`btn ${isFull ? 'btn-secondary' : 'btn-primary'}`}
                       style={{ width: '100%' }}
@@ -363,7 +367,7 @@ const TempleDetails = () => {
       {showModal && selectedSlot && (
         <div className="modal-overlay">
           <div className="modal-content" style={styles.modalBody}>
-            <button className="modal-close" onClick={() => setShowModal(false)}>×</button>
+            <button type="button" className="modal-close" onClick={() => setShowModal(false)}>×</button>
             <h3 style={{ fontSize: '1.4rem', borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: '0.75rem', marginBottom: '1.25rem' }}>
               Devotees Ticket Reservation Form
             </h3>

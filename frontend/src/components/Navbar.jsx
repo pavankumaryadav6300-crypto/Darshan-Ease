@@ -23,6 +23,7 @@ const Navbar = () => {
 
       {/* Hamburger Toggle */}
       <button 
+        type="button"
         style={styles.hamburger} 
         onClick={() => setMobileOpen(!mobileOpen)}
         aria-label="Toggle Menu"
@@ -91,7 +92,7 @@ const Navbar = () => {
               <span style={{ fontSize: '0.75rem', color: '#9ca3af', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Namaste,</span>
               <span style={{ fontSize: '0.92rem', color: '#fbbf24', fontWeight: '700' }}>{user.name}</span>
             </div>
-            <button onClick={handleLogout} className="btn btn-secondary" style={styles.logoutBtn}>
+            <button type="button" onClick={handleLogout} className="btn btn-secondary" style={styles.logoutBtn}>
               <LogOut size={13} /> Logout
             </button>
           </li>

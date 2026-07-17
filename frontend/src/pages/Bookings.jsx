@@ -140,6 +140,7 @@ const Bookings = () => {
                       <span style={styles.refCode}>#{booking._id.substring(18).toUpperCase()}</span>
                       <div style={styles.actionRow}>
                         <button
+                          type="button"
                           onClick={() => handlePrint(booking._id)}
                           className="btn btn-secondary"
                           style={styles.actionBtn}
@@ -148,6 +149,7 @@ const Bookings = () => {
                           <Printer size={14} /> Print
                         </button>
                         <button
+                          type="button"
                           onClick={() => handleCancelBooking(booking._id)}
                           className="btn btn-danger"
                           style={styles.actionBtn}
