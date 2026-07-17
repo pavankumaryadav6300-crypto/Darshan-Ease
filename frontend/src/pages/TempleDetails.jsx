@@ -30,6 +30,7 @@ const TempleDetails = () => {
   const [donationAmount, setDonationAmount] = useState('');
   const [donationDonor, setDonationDonor] = useState(user ? user.name : '');
   const [donationPurpose, setDonationPurpose] = useState('General Donation');
+  const [donationPaymentMethod, setDonationPaymentMethod] = useState('UPI');
   const [donationSubmitting, setDonationSubmitting] = useState(false);
 
   useEffect(() => {
@@ -153,7 +154,8 @@ const TempleDetails = () => {
         templeId: id,
         amount: parseFloat(donationAmount),
         devoteeName: donationDonor,
-        purpose: donationPurpose
+        purpose: donationPurpose,
+        paymentMethod: donationPaymentMethod
       });
 
       if (res.data.success) {
@@ -340,6 +342,19 @@ const TempleDetails = () => {
                 <option value="Annadanam">Annadanam (Free Meals Fund)</option>
                 <option value="Temple Development">Temple Renovation & Development</option>
                 <option value="Pooja/Seva Fund">Special Pooja / Archana Fund</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label className="form-label">Payment Method</label>
+              <select
+                className="form-control"
+                value={donationPaymentMethod}
+                onChange={(e) => setDonationPaymentMethod(e.target.value)}
+              >
+                <option value="UPI">UPI / QR Code</option>
+                <option value="Credit/Debit Card">Credit/Debit Card</option>
+                <option value="Net Banking">Net Banking</option>
               </select>
             </div>
 

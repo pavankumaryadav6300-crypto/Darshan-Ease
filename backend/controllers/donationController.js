@@ -6,7 +6,7 @@ import Temple from '../models/Temple.js';
 // @access  Public (Optionally authenticated)
 export const createDonation = async (req, res, next) => {
   try {
-    const { templeId, amount, devoteeName, purpose } = req.body;
+    const { templeId, amount, devoteeName, purpose, paymentMethod } = req.body;
 
     if (!templeId || !amount || !devoteeName) {
       res.status(400);
@@ -26,6 +26,7 @@ export const createDonation = async (req, res, next) => {
       devoteeName,
       purpose: purpose || 'General Donation',
       paymentStatus: 'Completed', // Mock payment integration success
+      paymentMethod: paymentMethod || 'UPI',
     };
 
     // If request contains authorization, link user

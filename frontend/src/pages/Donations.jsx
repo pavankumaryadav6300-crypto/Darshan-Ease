@@ -16,6 +16,7 @@ const Donations = () => {
   const [amount, setAmount] = useState('');
   const [devoteeName, setDevoteeName] = useState(user ? user.name : '');
   const [purpose, setPurpose] = useState('General Donation');
+  const [paymentMethod, setPaymentMethod] = useState('UPI');
   const [donations, setDonations] = useState([]);
   const [loadingHistory, setLoadingHistory] = useState(false);
   const [loadingTemples, setLoadingTemples] = useState(true);
@@ -89,6 +90,7 @@ const Donations = () => {
         amount: parseFloat(amount),
         devoteeName,
         purpose,
+        paymentMethod,
       });
 
       if (res.data.success) {
@@ -168,6 +170,19 @@ const Donations = () => {
               </div>
 
               <div className="form-group">
+                <label className="form-label">Payment Method</label>
+                <select
+                  className="form-control"
+                  value={paymentMethod}
+                  onChange={(e) => setPaymentMethod(e.target.value)}
+                >
+                  <option value="UPI">UPI / QR Code</option>
+                  <option value="Credit/Debit Card">Credit/Debit Card</option>
+                  <option value="Net Banking">Net Banking</option>
+                </select>
+              </div>
+
+              <div className="form-group">
                 <label className="form-label">Donation Amount (₹)</label>
                 <input
                   type="number"
@@ -227,7 +242,7 @@ const Donations = () => {
                   <div>
                     <h4 style={{ fontSize: '1rem', color: 'white' }}>{donation.temple?.name}</h4>
                     <span style={{ fontSize: '0.8rem', color: '#9ca3af', display: 'flex', alignItems: 'center', gap: '0.2rem', marginTop: '0.2rem' }}>
-                      <Calendar size={12} /> {new Date(donation.donatedAt).toLocaleDateString()} | Purpose: {donation.purpose}
+                      <Calendar size={12} /> {new Date(donation.donatedAt).toLocaleDateString()} | Purpose: {donation.purpose} | Via: {donation.paymentMethod}
                     </span>
                     <span style={{ fontSize: '0.8rem', color: '#fbbf24', display: 'block', marginTop: '0.1rem' }}>
                       Offered in Name of: {donation.devoteeName}

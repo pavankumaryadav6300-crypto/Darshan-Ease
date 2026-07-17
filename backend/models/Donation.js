@@ -32,6 +32,11 @@ const donationSchema = new mongoose.Schema(
       enum: ['Pending', 'Completed', 'Failed'],
       default: 'Completed',
     },
+    paymentMethod: {
+      type: String,
+      enum: ['Credit/Debit Card', 'UPI', 'Net Banking'],
+      default: 'UPI',
+    },
     donatedAt: {
       type: Date,
       default: Date.now,

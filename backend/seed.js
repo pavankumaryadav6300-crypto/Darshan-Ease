@@ -16,7 +16,7 @@ const templesData = [
     location: 'Tirupati, Andhra Pradesh',
     timings: '03:00 AM - 01:30 AM',
     description: 'Tirumala Venkateswara Temple is a landmark temple in the hill town of Tirumala, near Tirupati in Chittoor district of Andhra Pradesh, India. It is dedicated to Lord Venkateswara, an incarnation of Vishnu.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/4/4e/Tirumala_090615.jpg',
+    image: 'https://images.unsplash.com/photo-1590050752118-2e863dc0a4d5?auto=format&fit=crop&q=80&w=600',
     organizerIndex: 0
   },
   {
@@ -25,7 +25,7 @@ const templesData = [
     location: 'Varanasi, Uttar Pradesh',
     timings: '04:00 AM - 11:00 PM',
     description: 'Kashi Vishwanath Temple is one of the most famous Hindu temples dedicated to Lord Shiva. It is located in Varanasi, Uttar Pradesh, India. The temple stands on the western bank of the holy river Ganga.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/0/04/Kashi_Vishwanath_Temple_Varanasi.jpg',
+    image: 'https://images.unsplash.com/photo-1627885449221-5a3d0fb36f56?auto=format&fit=crop&q=80&w=600',
     organizerIndex: 0
   },
   {
@@ -34,7 +34,7 @@ const templesData = [
     location: 'Kedarnath, Uttarakhand',
     timings: '04:00 AM - 09:00 PM',
     description: 'Kedarnath Temple is a Hindu temple dedicated to the Hindu God Shiva. Located on the Garhwal Himalayan range near the Mandakini river, Kedarnath is located in the state of Uttarakhand, India.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/Kedarnath_Temple.jpg',
+    image: 'https://images.unsplash.com/photo-1626014304675-9276d47d4838?auto=format&fit=crop&q=80&w=600',
     organizerIndex: 1
   },
   {
@@ -43,7 +43,7 @@ const templesData = [
     location: 'Katra, Jammu & Kashmir',
     timings: '05:00 AM - 10:00 PM',
     description: 'The Vaishno Devi Temple is a holy Hindu temple dedicated to the Hindu Goddess Adi Shakti, located in Katra at the Trikuta Mountains within Jammu and Kashmir, India.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Vaishno_Devi_Shrine.jpg',
+    image: 'https://images.unsplash.com/photo-1622080352055-668f44fffcfa?auto=format&fit=crop&q=80&w=600',
     organizerIndex: 1
   },
   {
@@ -52,7 +52,7 @@ const templesData = [
     location: 'New Delhi, Delhi',
     timings: '09:30 AM - 08:30 PM',
     description: 'Akshardham is a Hindu temple, and spiritual-cultural campus in Delhi, India. The temple displays millennia of traditional Hindu and Indian culture, spirituality, and architecture.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Akshardham_Delhi_1.jpg',
+    image: 'https://images.unsplash.com/photo-1600055276336-db158cc755b7?auto=format&fit=crop&q=80&w=600',
     organizerIndex: 1
   },
   {
@@ -61,7 +61,7 @@ const templesData = [
     location: 'Amritsar, Punjab',
     timings: 'Open 24 Hours',
     description: 'The Golden Temple, also known as Harmandir Sahib, meaning "abode of God" or Darbar Sahib, is a Gurdwara located in the city of Amritsar, Punjab, India. It is the preeminent spiritual site of Sikhism.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/a/a2/Golden_Temple_Amritsar_India.jpg',
+    image: 'https://images.unsplash.com/photo-1589139265215-620242277d32?auto=format&fit=crop&q=80&w=600',
     organizerIndex: 2
   },
   {
@@ -70,7 +70,7 @@ const templesData = [
     location: 'Puri, Odisha',
     timings: '05:00 AM - 11:00 PM',
     description: 'The Jagannath Temple is an important Hindu temple dedicated to Jagannath, a form of Sri Krishna, one of the trinity of deities worshiped at the temple, located in Puri, Odisha, India.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/8/8c/Jagannatha_Temple_Puri_2011.jpg',
+    image: 'https://images.unsplash.com/photo-1595861962386-7e127393d25d?auto=format&fit=crop&q=80&w=600',
     organizerIndex: 2
   },
   {
@@ -79,7 +79,7 @@ const templesData = [
     location: 'Madurai, Tamil Nadu',
     timings: '05:00 AM - 12:30 PM, 04:00 PM - 10:00 PM',
     description: 'Meenakshi Sundareswarar Temple is a historic Hindu temple located on the southern bank of the Vaigai River in the temple city of Madurai, Tamil Nadu, India. It is dedicated to Goddess Meenakshi, a form of Parvati.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/b/b3/Madurai_Meenakshi_Amman_Temple_Gopuram.jpg',
+    image: 'https://images.unsplash.com/photo-1598286950298-295b77fbca5a?auto=format&fit=crop&q=80&w=600',
     organizerIndex: 2
   }
 ];
