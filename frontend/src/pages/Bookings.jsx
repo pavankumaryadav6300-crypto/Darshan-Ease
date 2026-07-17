@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import { Calendar, Users, Ban, Printer, Sparkles, QrCode, Ticket } from 'lucide-react';
+import { Calendar, Users, Ban, Printer, Sparkles, QrCode, Ticket, Gift } from 'lucide-react';
 import Loader from '../components/Loader';
 import { API_URL } from '../context/AuthContext';
 
@@ -112,6 +112,10 @@ const Bookings = () => {
                       <span style={styles.metaLabel}>Service Charge</span>
                       <span style={styles.metaVal}>{booking.totalPrice === 0 ? 'Free' : `₹${booking.totalPrice}`}</span>
                     </div>
+                    <div>
+                      <span style={styles.metaLabel}>Payment</span>
+                      <span style={styles.metaVal}>{booking.paymentMethod || 'UPI'}</span>
+                    </div>
                   </div>
 
                   <div style={styles.devoteeBox}>
@@ -129,6 +133,24 @@ const Bookings = () => {
                       ))}
                     </div>
                   </div>
+
+                  {/* Prasadams Box */}
+                  {(booking.prasadams > 0) && (
+                    <div style={{ marginTop: '1.25rem', paddingTop: '1.25rem', borderTop: '1px dashed rgba(255,255,255,0.08)' }}>
+                      <span style={{ fontSize: '0.85rem', color: '#fbbf24', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '0.35rem', marginBottom: '0.5rem' }}>
+                        <Gift size={14} /> Pre-ordered Prasadams
+                      </span>
+                      <div style={{ background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.2)', padding: '0.75rem', borderRadius: '8px' }}>
+                        <span style={{ color: 'white', fontWeight: '700', fontSize: '1rem', display: 'block' }}>
+                          {booking.prasadams} x Temple Prasadam
+                        </span>
+                        <span style={{ color: '#9ca3af', fontSize: '0.75rem', display: 'block', marginTop: '0.2rem' }}>
+                          Please collect at the prasadam counter by scanning this pass.
+                        </span>
+                      </div>
+                    </div>
+                  )}
+
                 </div>
 
                 {/* Right side: QR Gate Code */}

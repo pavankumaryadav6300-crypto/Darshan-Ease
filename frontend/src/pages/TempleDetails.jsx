@@ -25,6 +25,8 @@ const TempleDetails = () => {
     { name: '', age: '', gender: 'Male', idProofType: 'Aadhaar Card', idProofNumber: '' }
   ]);
   const [bookingLoading, setBookingLoading] = useState(false);
+  const [bookingPaymentMethod, setBookingPaymentMethod] = useState('UPI');
+  const [prasadamCount, setPrasadamCount] = useState(0);
 
   // Quick Donation state
   const [donationAmount, setDonationAmount] = useState('');
@@ -123,7 +125,9 @@ const TempleDetails = () => {
       const res = await axios.post(`${API_URL}/bookings`, {
         templeId: id,
         slotId: selectedSlot._id,
-        devotees
+        devotees,
+        paymentMethod: bookingPaymentMethod,
+        prasadams: prasadamCount
       });
 
       if (res.data.success) {
@@ -477,19 +481,55 @@ const TempleDetails = () => {
 
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '1rem' }}>
                 <button type="button" onClick={addDevotee} className="btn btn-secondary" style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }}>
-                  <Plus size={15} /> Add Pilgrim
+                  <Plus size={14} /> Add Another Devotee
                 </button>
-                <div style={{ textAlign: 'right' }}>
-                  <span style={{ fontSize: '0.85rem', color: '#9ca3af', textTransform: 'uppercase' }}>Total: </span>
-                  <span style={{ fontSize: '1.4rem', fontWeight: '800', color: '#fbbf24', textShadow: '0 0 10px rgba(245,158,11,0.2)' }}>
-                    ₹{selectedSlot.price * devotees.length}
-                  </span>
+              </div>
+
+              {/* Extra Features: Prasadams & Payment Method */}
+              <div style={{ marginBottom: '1.5rem', background: 'rgba(255,255,255,0.02)', padding: '1.25rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                <div className="form-group">
+                  <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    Pre-order Prasadams (₹50 each)
+                  </label>
+                  <input
+                    type="number"
+                    min="0"
+                    max="20"
+                    className="form-control"
+                    value={prasadamCount}
+                    onChange={(e) => setPrasadamCount(parseInt(e.target.value) || 0)}
+                    placeholder="e.g. 2 for Tirupati Laddu"
+                  />
+                  <small style={{ color: '#9ca3af', fontSize: '0.8rem', marginTop: '0.25rem' }}>
+                    Fresh temple prasadams (like Tirupati Laddu) ready for collection after darshan.
+                  </small>
+                </div>
+
+                <div className="form-group" style={{ marginBottom: 0, marginTop: '1rem' }}>
+                  <label className="form-label">Payment Method</label>
+                  <select
+                    className="form-control"
+                    value={bookingPaymentMethod}
+                    onChange={(e) => setBookingPaymentMethod(e.target.value)}
+                  >
+                    <option value="UPI">UPI / QR Code</option>
+                    <option value="Credit/Debit Card">Credit/Debit Card</option>
+                    <option value="Net Banking">Net Banking</option>
+                  </select>
                 </div>
               </div>
 
-              <button type="submit" className="btn btn-primary" style={{ width: '100%' }} disabled={bookingLoading}>
-                {bookingLoading ? 'Reserving...' : 'Confirm Booking'}
-              </button>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '2rem' }}>
+                <div>
+                  <span style={{ display: 'block', fontSize: '0.85rem', color: '#9ca3af', textTransform: 'uppercase' }}>Total Cost</span>
+                  <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#fbbf24' }}>
+                    ₹{(selectedSlot.price * devotees.length) + (prasadamCount * 50)}
+                  </span>
+                </div>
+                <button type="submit" className="btn btn-primary" style={{ padding: '0.75rem 2rem' }} disabled={bookingLoading}>
+                  {bookingLoading ? 'Reserving...' : 'Confirm Booking'}
+                </button>
+              </div>
             </form>
           </div>
         </div>

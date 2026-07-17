@@ -53,6 +53,15 @@ const bookingSchema = new mongoose.Schema(
       enum: ['Booked', 'Cancelled'],
       default: 'Booked',
     },
+    paymentMethod: {
+      type: String,
+      enum: ['UPI', 'Credit/Debit Card', 'Net Banking'],
+      default: 'UPI',
+    },
+    prasadams: {
+      type: Number,
+      default: 0,
+    },
     bookingDate: {
       type: Date,
       default: Date.now,

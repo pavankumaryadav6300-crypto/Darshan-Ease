@@ -7,7 +7,7 @@ import Temple from '../models/Temple.js';
 // @access  Private (USER, ORGANIZER, ADMIN)
 export const createBooking = async (req, res, next) => {
   try {
-    const { templeId, slotId, devotees } = req.body;
+    const { templeId, slotId, devotees, paymentMethod, prasadams } = req.body;
 
     if (!templeId || !slotId || !devotees || devotees.length === 0) {
       res.status(400);
@@ -34,7 +34,8 @@ export const createBooking = async (req, res, next) => {
       throw new Error('Selected slot is full or unavailable for the requested number of devotees');
     }
 
-    const totalPrice = slot.price * devoteeCount;
+    const parsedPrasadams = parseInt(prasadams) || 0;
+    const totalPrice = (slot.price * devoteeCount) + (parsedPrasadams * 50); // ₹50 per prasadam
 
     // Create booking
     const booking = await Booking.create({
@@ -43,6 +44,8 @@ export const createBooking = async (req, res, next) => {
       slot: slotId,
       devotees,
       totalPrice,
+      paymentMethod: paymentMethod || 'UPI',
+      prasadams: parsedPrasadams,
       status: 'Booked',
     });
 
