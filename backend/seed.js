@@ -15,8 +15,8 @@ const templesData = [
     deity: 'Lord Venkateswara (Balaji)',
     location: 'Tirupati, Andhra Pradesh',
     timings: '03:00 AM - 01:30 AM',
-    description: 'Tirumala Venkateswara Temple is a landmark temple in the hill town of Tirumala, near Tirupati in Chittoor district of Andhra Pradesh, India. It is dedicated to Lord Venkateswara, an incarnation of Vishnu.',
-    image: 'https://images.unsplash.com/photo-1590050752118-2e863dc0a4d5?auto=format&fit=crop&q=80&w=600',
+    description: 'The Venkateswara Swami Temple—also known as Tirumala Temple, Tirupati Temple and Tirupati Balaji Temple—is a Hindu temple located in the hills of Tirumala, within Tirupati Urban Mandal, Tirupati district, Andhra Pradesh, India. The temple is dedicated to Venkateswara, a form of Vishnu, who is believed to have appeared on earth to save mankind from trials and troubles of Kali Yuga. Hence the site is also called Kaliyuga Vaikuntha and the deity is known as Kaliyuga Prathyaksha Daivam. Venkateswara is additionally known as Balaji, Govinda, and Srinivasa. The temple is administered by the Tirumala Tirupati Devasthanams (TTD), an autonomous body under the control of the Government of Andhra Pradesh. The head of TTD is appointed by Andhra Pradesh Government.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Tirumala_090615.jpg/800px-Tirumala_090615.jpg',
     organizerIndex: 0
   },
   {
@@ -24,8 +24,8 @@ const templesData = [
     deity: 'Lord Shiva (Vishwanatha)',
     location: 'Varanasi, Uttar Pradesh',
     timings: '04:00 AM - 11:00 PM',
-    description: 'Kashi Vishwanath Temple is one of the most famous Hindu temples dedicated to Lord Shiva. It is located in Varanasi, Uttar Pradesh, India. The temple stands on the western bank of the holy river Ganga.',
-    image: 'https://images.unsplash.com/photo-1627885449221-5a3d0fb36f56?auto=format&fit=crop&q=80&w=600',
+    description: 'Kashi Vishwanath Temple is a Hindu temple dedicated to Shiva. It is located in Vishwanath Gali, in Varanasi, Uttar Pradesh, India. The temple is a Hindu pilgrimage site and is one of the twelve Jyotirlinga shrines. The presiding deity is known by the names Vishwanath and Vishweshwara, meaning Lord of the Universe.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Kashi_Vishwanath.jpg/800px-Kashi_Vishwanath.jpg',
     organizerIndex: 0
   },
   {
@@ -33,8 +33,8 @@ const templesData = [
     deity: 'Lord Shiva',
     location: 'Kedarnath, Uttarakhand',
     timings: '04:00 AM - 09:00 PM',
-    description: 'Kedarnath Temple is a Hindu temple dedicated to the Hindu God Shiva. Located on the Garhwal Himalayan range near the Mandakini river, Kedarnath is located in the state of Uttarakhand, India.',
-    image: 'https://images.unsplash.com/photo-1626014304675-9276d47d4838?auto=format&fit=crop&q=80&w=600',
+    description: 'Kēdāranātha Temple is a Hindu temple, one of the twelve jyotirlinga of Śiva. The temple is located on the Garhwal Himalayan range near the Mandākinī river, in the state of Uttarakhand, India. Due to extreme weather conditions, the temple is open to the general public only between the months of April and November. During the winters, the vigraha (deity) of the temple is carried down to Ukhimath to be worshiped for the next six months. Kēdāranātha is seen as a homogeneous form of Śiva, the \'Lord of Kēdārakhaṇḍa\', the historical name of the region.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Kedarnath_Temple_in_Rainy_season.jpg/800px-Kedarnath_Temple_in_Rainy_season.jpg',
     organizerIndex: 1
   },
   {
@@ -42,8 +42,8 @@ const templesData = [
     deity: 'Goddess Vaishno Devi (Mata Rani)',
     location: 'Katra, Jammu & Kashmir',
     timings: '05:00 AM - 10:00 PM',
-    description: 'The Vaishno Devi Temple is a holy Hindu temple dedicated to the Hindu Goddess Adi Shakti, located in Katra at the Trikuta Mountains within Jammu and Kashmir, India.',
-    image: 'https://images.unsplash.com/photo-1622080352055-668f44fffcfa?auto=format&fit=crop&q=80&w=600',
+    description: 'Vaishno Devi Temple, also known as the Shri Mata Vaishno Devi Temple and Vaishno Devi Bhavan, is a Hindu temple in Katra, Reasi district, Jammu and Kashmir. Dedicated to Vaishno Devi, a manifestation of goddesses Mahakali, Mahalakshmi, and Mahasarasvati, it is on Trikuta mountain at an elevation of 5,200 feet. The temple is 43 km from the main city of Jammu and 29 km from the district headquarters Reasi town. The temple is governed by the Shri Mata Vaishno Devi Shrine Board (SMVDSB) and has been chaired by the Governor of Jammu and Kashmir since August 1986.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Snowfall_in_Vaishno_Devi.jpg/800px-Snowfall_in_Vaishno_Devi.jpg',
     organizerIndex: 1
   },
   {
@@ -51,8 +51,8 @@ const templesData = [
     deity: 'Lord Swaminarayan',
     location: 'New Delhi, Delhi',
     timings: '09:30 AM - 08:30 PM',
-    description: 'Akshardham is a Hindu temple, and spiritual-cultural campus in Delhi, India. The temple displays millennia of traditional Hindu and Indian culture, spirituality, and architecture.',
-    image: 'https://images.unsplash.com/photo-1600055276336-db158cc755b7?auto=format&fit=crop&q=80&w=600',
+    description: 'Swaminarayan Akshardham is a Hindu temple and campus in Delhi, India. The temple is close to the border with Noida. Also known as Akshardham Temple or Akshardham Delhi, the complex displays traditional and modern Hindu culture and architecture. Inspired by Yogiji Maharaj and created by Pramukh Swami Maharaj, it was constructed by BAPS. It is the world\'s second-largest BAPS Hindu temple, following Akshardham, New Jersey, in the United States.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/New_Delhi_Temple.jpg/800px-New_Delhi_Temple.jpg',
     organizerIndex: 1
   },
   {
@@ -60,8 +60,8 @@ const templesData = [
     deity: 'Guru Granth Sahib',
     location: 'Amritsar, Punjab',
     timings: 'Open 24 Hours',
-    description: 'The Golden Temple, also known as Harmandir Sahib, meaning "abode of God" or Darbar Sahib, is a Gurdwara located in the city of Amritsar, Punjab, India. It is the preeminent spiritual site of Sikhism.',
-    image: 'https://images.unsplash.com/photo-1589139265215-620242277d32?auto=format&fit=crop&q=80&w=600',
+    description: 'The Golden Temple is a gurdwara located in Amritsar, Punjab, India. It is the pre-eminent spiritual site of Sikhism and its holiest site. The gurdwara complex is a collection of buildings around the sanctum sanctorum and the sarovar. One of these is Akal Takht, part of the Panj Takht and the chief centre of religious authority of Sikhism. Additional buildings include a clock tower, the offices of the Shiromani Gurdwara Parbandhak Committee, a Museum and a langar—a free Sikh community-run kitchen that offers a vegetarian meal to all visitors without discrimination. Over 150,000 people visit the shrine every day for worship.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/The_Golden_Temple_of_Amrithsar_7.jpg/800px-The_Golden_Temple_of_Amrithsar_7.jpg',
     organizerIndex: 2
   },
   {
@@ -69,8 +69,8 @@ const templesData = [
     deity: 'Lord Jagannath (Vishnu)',
     location: 'Puri, Odisha',
     timings: '05:00 AM - 11:00 PM',
-    description: 'The Jagannath Temple is an important Hindu temple dedicated to Jagannath, a form of Sri Krishna, one of the trinity of deities worshiped at the temple, located in Puri, Odisha, India.',
-    image: 'https://images.unsplash.com/photo-1595861962386-7e127393d25d?auto=format&fit=crop&q=80&w=600',
+    description: 'The Jagannath Temple is a Hindu temple dedicated to Jagannath, a form of Vishnu. It is located in Puri, Odisha, on the eastern coast of India. As per temple records, King Indradyumna of Avanti built the main temple. The present temple complex was rebuilt from the eleventh century onwards on the site of the earlier shrines, excluding the main Jagannath temple, and was begun by Anantavarman Chodaganga, the first ruler of the Eastern Ganga dynasty. Many of the temple rituals are based on Shabari Tantras which are evolved from tribal beliefs respectively. The local legends link the idols with Nilamadhaba deva worshipped by tribala and the daitapatis (servitors) claim to be descendants of the tribes. The temple is one of the 108 Abhimana Kshethram of the Sri Vaishnavite tradition.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Shri_Jagannath_temple.jpg/800px-Shri_Jagannath_temple.jpg',
     organizerIndex: 2
   },
   {
@@ -78,8 +78,8 @@ const templesData = [
     deity: 'Goddess Meenakshi (Parvati)',
     location: 'Madurai, Tamil Nadu',
     timings: '05:00 AM - 12:30 PM, 04:00 PM - 10:00 PM',
-    description: 'Meenakshi Sundareswarar Temple is a historic Hindu temple located on the southern bank of the Vaigai River in the temple city of Madurai, Tamil Nadu, India. It is dedicated to Goddess Meenakshi, a form of Parvati.',
-    image: 'https://images.unsplash.com/photo-1598286950298-295b77fbca5a?auto=format&fit=crop&q=80&w=600',
+    description: 'Meenakshi Temple, also known as Meenakshi Sundareswarar Temple, is a historic Hindu temple located on the southern bank of the Vaigai River in Madurai, Tamil Nadu, India. It is dedicated to Meenakshi, a form of Parvati, and her consort Sundareswarar (Shiva). The temple is theologically significant as it represents a confluence of various denominations of Hinduism such as Shaivism, Shaktism, and Vaishnavism.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/An_aerial_view_of_Madurai_city_from_atop_of_Meenakshi_Amman_temple.jpg/800px-An_aerial_view_of_Madurai_city_from_atop_of_Meenakshi_Amman_temple.jpg',
     organizerIndex: 2
   }
 ];
