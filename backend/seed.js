@@ -187,9 +187,9 @@ const seedData = async () => {
         createdBy: assignedOrganizer._id,
       });
 
-      // Precreate slots for today, tomorrow, and day after tomorrow
+      // Precreate slots for today and next 7 days
       const dates = [];
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 7; i++) {
         const d = new Date();
         d.setDate(d.getDate() + i);
         dates.push(d.toISOString().split('T')[0]);

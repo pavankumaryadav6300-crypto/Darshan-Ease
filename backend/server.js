@@ -77,3 +77,5 @@ app.listen(PORT, () => {
 process.on('unhandledRejection', (err, promise) => {
   console.log(`Unhandled Rejection Error: ${err.message}`);
 });
+
+export default app;
